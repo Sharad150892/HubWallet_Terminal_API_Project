@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="resources.Listeners"></listener>
+	</listeners>
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="testCase.TC001_LoginValidation" />
+			<class name="testCase.TC002_Get_Customer_List" />
+			<class name="testCase.TC003_Get_Appointment_List" />
+			<class name="testCase.TC004_Get_Checkout_Data" />
+			<class name="testCase.TC005_Get_Service_List" />
+			<class name="testCase.TC006_Add_Services" />
+			<class name="testCase.TC007_Get_Gift_CertificateTemplate" />
+			<class name="testCase.TC008_Add_Certificate" />
+			<class name="testCase.TC009_Get_GiftCard_Preset_Amount" />
+			<class name="testCase.TC010_Add_Gift_Card" />
+			<class name="testCase.TC011_Get_Service_Category" />
+			<class name="testCase.TC012_Add_Customer" />
+			<class name="testCase.TC013_Get_Product_Discount" />
+			<class name="testCase.TC014_Remove_Row" />
+			<class name="testCase.TC015_Remove_Data_From_Cart" />
+			<class name="testCase.TC016_Update_Cart_Quantity" />
+			<class name="testCase.TC017_Check_Number" />
+			<class name="testCase.TC018_Generate_Token" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

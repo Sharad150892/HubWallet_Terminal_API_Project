@@ -1,0 +1,33 @@
+Request method:	POST
+Request URI:	https://hubwallet.com/api_terminal/checkout/updateCartQunatity
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbl9pZCI6IjI5MjQiLCJ2ZW5kb3JfaWQiOiI3MSIsImRldmljZV9pZCI6ImFlODA2NDUxNDkxNTc3MjIiLCJ0aW1lIjoxNjk5MjY5MzU0LCJleHAiOjE2OTkyNjk0MTQsIkFQSV9USU1FIjoxNjk5MjY5MzU0fQ.z7O9ttzQi-0WrXbAXiL2zhdd5benmlbPq7Q-VKbdFrA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "cart_id": "3456",
+    "quantity": "5"
+}
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Mon, 06 Nov 2023 11:15:57 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/7.3.10
+Set-Cookie: ci_session=d6af7aaa41e491a864ddcb530798b79e4c9bcbca; expires=Mon, 06-Nov-2023 13:15:57 GMT; Max-Age=7200; path=/; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-Encoding: gzip
+
+<html>
+  <body>{"message":"Quantity not available","status":0}</body>
+</html>

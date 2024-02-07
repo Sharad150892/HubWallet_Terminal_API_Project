@@ -1,0 +1,1512 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>118/1/7</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Nov 06 16:37:53 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>80 seconds (80896 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCase.TC016_Update_Cart_Quantity.updateCartQuantity()'><b>updateCartQuantity</b><br>Test class: testCase.TC016_Update_Cart_Quantity</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;405&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at testCase.TC016_Update_Cart_Quantity.updateCartQuantity(TC016_Update_Cart_Quantity.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 39 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace16705482", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace16705482'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;405&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at jdk.internal.reflect.GeneratedMethodAccessor181.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at testCase.TC016_Update_Cart_Quantity.updateCartQuantity(TC016_Update_Cart_Quantity.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>2</td>
+<td>testCase.TC016_Update_Cart_Quantity@25fb8912</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCase.TC012_Add_Customer.addCustomer_API_checkResponseTime()'><b>addCustomer_API_checkResponseTime</b><br>Test class: testCase.TC012_Add_Customer</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at testCase.TC012_Add_Customer.addCustomer_API_checkResponseTime(TC012_Add_Customer.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2099044017", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2099044017'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at org.testng.Assert.assertTrue(Assert.java:53)
+	at testCase.TC012_Add_Customer.addCustomer_API_checkResponseTime(TC012_Add_Customer.java:77)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCase.TC012_Add_Customer@543588e6</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCase.TC008_Add_Certificate.addCertificate_API_checkContentType()'><b>addCertificate_API_checkContentType</b><br>Test class: testCase.TC008_Add_Certificate</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC008_Add_Certificate@1af2d44a</td></tr>
+<tr>
+<td title='testCase.TC008_Add_Certificate.addCertificate_API_checkResponseBody()'><b>addCertificate_API_checkResponseBody</b><br>Test class: testCase.TC008_Add_Certificate</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC008_Add_Certificate@1af2d44a</td></tr>
+<tr>
+<td title='testCase.TC008_Add_Certificate.addCertificate_API_checkResponseTime()'><b>addCertificate_API_checkResponseTime</b><br>Test class: testCase.TC008_Add_Certificate</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC008_Add_Certificate@1af2d44a</td></tr>
+<tr>
+<td title='testCase.TC008_Add_Certificate.addCertificate_API_checkServerType()'><b>addCertificate_API_checkServerType</b><br>Test class: testCase.TC008_Add_Certificate</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC008_Add_Certificate@1af2d44a</td></tr>
+<tr>
+<td title='testCase.TC008_Add_Certificate.addCertificate_API_checkStatusCode()'><b>addCertificate_API_checkStatusCode</b><br>Test class: testCase.TC008_Add_Certificate</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC008_Add_Certificate@1af2d44a</td></tr>
+<tr>
+<td title='testCase.TC008_Add_Certificate.addCertificate_API_printAllHeader()'><b>addCertificate_API_printAllHeader</b><br>Test class: testCase.TC008_Add_Certificate</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC008_Add_Certificate@1af2d44a</td></tr>
+<tr>
+<td title='testCase.TC008_Add_Certificate.addCertificate_checkStatusLine()'><b>addCertificate_checkStatusLine</b><br>Test class: testCase.TC008_Add_Certificate</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC008_Add_Certificate@1af2d44a</td></tr>
+<tr>
+<td title='testCase.TC012_Add_Customer.addCustomer_API_checkContentType()'><b>addCustomer_API_checkContentType</b><br>Test class: testCase.TC012_Add_Customer</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC012_Add_Customer@543588e6</td></tr>
+<tr>
+<td title='testCase.TC012_Add_Customer.addCustomer_API_checkResponseBody()'><b>addCustomer_API_checkResponseBody</b><br>Test class: testCase.TC012_Add_Customer</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC012_Add_Customer@543588e6</td></tr>
+<tr>
+<td title='testCase.TC012_Add_Customer.addCustomer_API_checkServerType()'><b>addCustomer_API_checkServerType</b><br>Test class: testCase.TC012_Add_Customer</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC012_Add_Customer@543588e6</td></tr>
+<tr>
+<td title='testCase.TC012_Add_Customer.addCustomer_API_checkStatusCode()'><b>addCustomer_API_checkStatusCode</b><br>Test class: testCase.TC012_Add_Customer</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC012_Add_Customer@543588e6</td></tr>
+<tr>
+<td title='testCase.TC012_Add_Customer.addCustomer_API_checkStatusLine()'><b>addCustomer_API_checkStatusLine</b><br>Test class: testCase.TC012_Add_Customer</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC012_Add_Customer@543588e6</td></tr>
+<tr>
+<td title='testCase.TC012_Add_Customer.addCustomer_API_printAllHeader()'><b>addCustomer_API_printAllHeader</b><br>Test class: testCase.TC012_Add_Customer</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC012_Add_Customer@543588e6</td></tr>
+<tr>
+<td title='testCase.TC010_Add_Gift_Card.addGiftCard_API_checkContentType()'><b>addGiftCard_API_checkContentType</b><br>Test class: testCase.TC010_Add_Gift_Card</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC010_Add_Gift_Card@618425b5</td></tr>
+<tr>
+<td title='testCase.TC010_Add_Gift_Card.addGiftCard_API_checkResponseBody()'><b>addGiftCard_API_checkResponseBody</b><br>Test class: testCase.TC010_Add_Gift_Card</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC010_Add_Gift_Card@618425b5</td></tr>
+<tr>
+<td title='testCase.TC010_Add_Gift_Card.addGiftCard_API_checkResponseTime()'><b>addGiftCard_API_checkResponseTime</b><br>Test class: testCase.TC010_Add_Gift_Card</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC010_Add_Gift_Card@618425b5</td></tr>
+<tr>
+<td title='testCase.TC010_Add_Gift_Card.addGiftCard_API_checkServerType()'><b>addGiftCard_API_checkServerType</b><br>Test class: testCase.TC010_Add_Gift_Card</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC010_Add_Gift_Card@618425b5</td></tr>
+<tr>
+<td title='testCase.TC010_Add_Gift_Card.addGiftCard_API_checkStatusCode()'><b>addGiftCard_API_checkStatusCode</b><br>Test class: testCase.TC010_Add_Gift_Card</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC010_Add_Gift_Card@618425b5</td></tr>
+<tr>
+<td title='testCase.TC010_Add_Gift_Card.addGiftCard_API_checkStatusLine()'><b>addGiftCard_API_checkStatusLine</b><br>Test class: testCase.TC010_Add_Gift_Card</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC010_Add_Gift_Card@618425b5</td></tr>
+<tr>
+<td title='testCase.TC010_Add_Gift_Card.addGiftCard_API_printAllHeader()'><b>addGiftCard_API_printAllHeader</b><br>Test class: testCase.TC010_Add_Gift_Card</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC010_Add_Gift_Card@618425b5</td></tr>
+<tr>
+<td title='testCase.TC006_Add_Services.addService_API_checkContentType()'><b>addService_API_checkContentType</b><br>Test class: testCase.TC006_Add_Services</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC006_Add_Services@66d3eec0</td></tr>
+<tr>
+<td title='testCase.TC006_Add_Services.addService_API_checkResponseBody()'><b>addService_API_checkResponseBody</b><br>Test class: testCase.TC006_Add_Services</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC006_Add_Services@66d3eec0</td></tr>
+<tr>
+<td title='testCase.TC006_Add_Services.addService_API_checkResponseTime()'><b>addService_API_checkResponseTime</b><br>Test class: testCase.TC006_Add_Services</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC006_Add_Services@66d3eec0</td></tr>
+<tr>
+<td title='testCase.TC006_Add_Services.addService_API_checkServerType()'><b>addService_API_checkServerType</b><br>Test class: testCase.TC006_Add_Services</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC006_Add_Services@66d3eec0</td></tr>
+<tr>
+<td title='testCase.TC006_Add_Services.addService_API_checkStatusCode()'><b>addService_API_checkStatusCode</b><br>Test class: testCase.TC006_Add_Services</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC006_Add_Services@66d3eec0</td></tr>
+<tr>
+<td title='testCase.TC006_Add_Services.addService_API_checkStatusLine()'><b>addService_API_checkStatusLine</b><br>Test class: testCase.TC006_Add_Services</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC006_Add_Services@66d3eec0</td></tr>
+<tr>
+<td title='testCase.TC006_Add_Services.addService_API_printAllHeader()'><b>addService_API_printAllHeader</b><br>Test class: testCase.TC006_Add_Services</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC006_Add_Services@66d3eec0</td></tr>
+<tr>
+<td title='testCase.TC017_Check_Number.checkNumber_API_checkContentType()'><b>checkNumber_API_checkContentType</b><br>Test class: testCase.TC017_Check_Number</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC017_Check_Number@7c24b813</td></tr>
+<tr>
+<td title='testCase.TC017_Check_Number.checkNumber_API_checkResponseBody()'><b>checkNumber_API_checkResponseBody</b><br>Test class: testCase.TC017_Check_Number</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC017_Check_Number@7c24b813</td></tr>
+<tr>
+<td title='testCase.TC017_Check_Number.checkNumber_API_checkResponseTime()'><b>checkNumber_API_checkResponseTime</b><br>Test class: testCase.TC017_Check_Number</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC017_Check_Number@7c24b813</td></tr>
+<tr>
+<td title='testCase.TC017_Check_Number.checkNumber_API_checkServerType()'><b>checkNumber_API_checkServerType</b><br>Test class: testCase.TC017_Check_Number</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC017_Check_Number@7c24b813</td></tr>
+<tr>
+<td title='testCase.TC017_Check_Number.checkNumber_API_checkStatusCode()'><b>checkNumber_API_checkStatusCode</b><br>Test class: testCase.TC017_Check_Number</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC017_Check_Number@7c24b813</td></tr>
+<tr>
+<td title='testCase.TC017_Check_Number.checkNumber_API_checkStatusLine()'><b>checkNumber_API_checkStatusLine</b><br>Test class: testCase.TC017_Check_Number</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC017_Check_Number@7c24b813</td></tr>
+<tr>
+<td title='testCase.TC017_Check_Number.checkNumber_API_printAllHeader()'><b>checkNumber_API_printAllHeader</b><br>Test class: testCase.TC017_Check_Number</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC017_Check_Number@7c24b813</td></tr>
+<tr>
+<td title='testCase.TC018_Generate_Token.generateToken_API_checkContentType()'><b>generateToken_API_checkContentType</b><br>Test class: testCase.TC018_Generate_Token</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC018_Generate_Token@2c35e847</td></tr>
+<tr>
+<td title='testCase.TC018_Generate_Token.generateToken_API_checkResponseBody()'><b>generateToken_API_checkResponseBody</b><br>Test class: testCase.TC018_Generate_Token</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC018_Generate_Token@2c35e847</td></tr>
+<tr>
+<td title='testCase.TC018_Generate_Token.generateToken_API_checkResponseTime()'><b>generateToken_API_checkResponseTime</b><br>Test class: testCase.TC018_Generate_Token</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC018_Generate_Token@2c35e847</td></tr>
+<tr>
+<td title='testCase.TC018_Generate_Token.generateToken_API_checkServerType()'><b>generateToken_API_checkServerType</b><br>Test class: testCase.TC018_Generate_Token</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC018_Generate_Token@2c35e847</td></tr>
+<tr>
+<td title='testCase.TC018_Generate_Token.generateToken_API_checkStatusCode()'><b>generateToken_API_checkStatusCode</b><br>Test class: testCase.TC018_Generate_Token</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC018_Generate_Token@2c35e847</td></tr>
+<tr>
+<td title='testCase.TC018_Generate_Token.generateToken_API_checkStatusLine()'><b>generateToken_API_checkStatusLine</b><br>Test class: testCase.TC018_Generate_Token</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC018_Generate_Token@2c35e847</td></tr>
+<tr>
+<td title='testCase.TC018_Generate_Token.generateToken_API_printAllHeader()'><b>generateToken_API_printAllHeader</b><br>Test class: testCase.TC018_Generate_Token</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC018_Generate_Token@2c35e847</td></tr>
+<tr>
+<td title='testCase.TC003_Get_Appointment_List.getAppointmentListAPI_checkStatusLine()'><b>getAppointmentListAPI_checkStatusLine</b><br>Test class: testCase.TC003_Get_Appointment_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC003_Get_Appointment_List@6cd28fa7</td></tr>
+<tr>
+<td title='testCase.TC003_Get_Appointment_List.getAppointmentList_API_checkContentType()'><b>getAppointmentList_API_checkContentType</b><br>Test class: testCase.TC003_Get_Appointment_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC003_Get_Appointment_List@6cd28fa7</td></tr>
+<tr>
+<td title='testCase.TC003_Get_Appointment_List.getAppointmentList_API_checkResponseBody()'><b>getAppointmentList_API_checkResponseBody</b><br>Test class: testCase.TC003_Get_Appointment_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC003_Get_Appointment_List@6cd28fa7</td></tr>
+<tr>
+<td title='testCase.TC003_Get_Appointment_List.getAppointmentList_API_checkResponseTime()'><b>getAppointmentList_API_checkResponseTime</b><br>Test class: testCase.TC003_Get_Appointment_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC003_Get_Appointment_List@6cd28fa7</td></tr>
+<tr>
+<td title='testCase.TC003_Get_Appointment_List.getAppointmentList_API_checkServerType()'><b>getAppointmentList_API_checkServerType</b><br>Test class: testCase.TC003_Get_Appointment_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC003_Get_Appointment_List@6cd28fa7</td></tr>
+<tr>
+<td title='testCase.TC003_Get_Appointment_List.getAppointmentList_API_checkStatusCode()'><b>getAppointmentList_API_checkStatusCode</b><br>Test class: testCase.TC003_Get_Appointment_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC003_Get_Appointment_List@6cd28fa7</td></tr>
+<tr>
+<td title='testCase.TC003_Get_Appointment_List.getAppointmentList_API_printAllHeader()'><b>getAppointmentList_API_printAllHeader</b><br>Test class: testCase.TC003_Get_Appointment_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC003_Get_Appointment_List@6cd28fa7</td></tr>
+<tr>
+<td title='testCase.TC004_Get_Checkout_Data.getCheckoutData_API_checkContentType()'><b>getCheckoutData_API_checkContentType</b><br>Test class: testCase.TC004_Get_Checkout_Data</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC004_Get_Checkout_Data@614ca7df</td></tr>
+<tr>
+<td title='testCase.TC004_Get_Checkout_Data.getCheckoutData_API_checkResponseBody()'><b>getCheckoutData_API_checkResponseBody</b><br>Test class: testCase.TC004_Get_Checkout_Data</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC004_Get_Checkout_Data@614ca7df</td></tr>
+<tr>
+<td title='testCase.TC004_Get_Checkout_Data.getCheckoutData_API_checkResponseTime()'><b>getCheckoutData_API_checkResponseTime</b><br>Test class: testCase.TC004_Get_Checkout_Data</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC004_Get_Checkout_Data@614ca7df</td></tr>
+<tr>
+<td title='testCase.TC004_Get_Checkout_Data.getCheckoutData_API_checkServerType()'><b>getCheckoutData_API_checkServerType</b><br>Test class: testCase.TC004_Get_Checkout_Data</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC004_Get_Checkout_Data@614ca7df</td></tr>
+<tr>
+<td title='testCase.TC004_Get_Checkout_Data.getCheckoutData_API_checkStatusCode()'><b>getCheckoutData_API_checkStatusCode</b><br>Test class: testCase.TC004_Get_Checkout_Data</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC004_Get_Checkout_Data@614ca7df</td></tr>
+<tr>
+<td title='testCase.TC004_Get_Checkout_Data.getCheckoutData_API_checkStatusLine()'><b>getCheckoutData_API_checkStatusLine</b><br>Test class: testCase.TC004_Get_Checkout_Data</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC004_Get_Checkout_Data@614ca7df</td></tr>
+<tr>
+<td title='testCase.TC004_Get_Checkout_Data.getCheckoutData_API_printAllHeader()'><b>getCheckoutData_API_printAllHeader</b><br>Test class: testCase.TC004_Get_Checkout_Data</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC004_Get_Checkout_Data@614ca7df</td></tr>
+<tr>
+<td title='testCase.TC002_Get_Customer_List.getCustomerList_API_checkContentType()'><b>getCustomerList_API_checkContentType</b><br>Test class: testCase.TC002_Get_Customer_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC002_Get_Customer_List@7e7be63f</td></tr>
+<tr>
+<td title='testCase.TC002_Get_Customer_List.getCustomerList_API_checkResponseBody()'><b>getCustomerList_API_checkResponseBody</b><br>Test class: testCase.TC002_Get_Customer_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC002_Get_Customer_List@7e7be63f</td></tr>
+<tr>
+<td title='testCase.TC002_Get_Customer_List.getCustomerList_API_checkResponseTime()'><b>getCustomerList_API_checkResponseTime</b><br>Test class: testCase.TC002_Get_Customer_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC002_Get_Customer_List@7e7be63f</td></tr>
+<tr>
+<td title='testCase.TC002_Get_Customer_List.getCustomerList_API_checkServerType()'><b>getCustomerList_API_checkServerType</b><br>Test class: testCase.TC002_Get_Customer_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC002_Get_Customer_List@7e7be63f</td></tr>
+<tr>
+<td title='testCase.TC002_Get_Customer_List.getCustomerList_API_checkStatusCode()'><b>getCustomerList_API_checkStatusCode</b><br>Test class: testCase.TC002_Get_Customer_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC002_Get_Customer_List@7e7be63f</td></tr>
+<tr>
+<td title='testCase.TC002_Get_Customer_List.getCustomerList_API_checkStatusLine()'><b>getCustomerList_API_checkStatusLine</b><br>Test class: testCase.TC002_Get_Customer_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC002_Get_Customer_List@7e7be63f</td></tr>
+<tr>
+<td title='testCase.TC002_Get_Customer_List.getCustomerList_API_printAllHeader()'><b>getCustomerList_API_printAllHeader</b><br>Test class: testCase.TC002_Get_Customer_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC002_Get_Customer_List@7e7be63f</td></tr>
+<tr>
+<td title='testCase.TC009_Get_GiftCard_Preset_Amount.getGiftCardPresetAmount_API_checkContentType()'><b>getGiftCardPresetAmount_API_checkContentType</b><br>Test class: testCase.TC009_Get_GiftCard_Preset_Amount</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC009_Get_GiftCard_Preset_Amount@18d87d80</td></tr>
+<tr>
+<td title='testCase.TC009_Get_GiftCard_Preset_Amount.getGiftCardPresetAmount_API_checkResponseBody()'><b>getGiftCardPresetAmount_API_checkResponseBody</b><br>Test class: testCase.TC009_Get_GiftCard_Preset_Amount</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC009_Get_GiftCard_Preset_Amount@18d87d80</td></tr>
+<tr>
+<td title='testCase.TC009_Get_GiftCard_Preset_Amount.getGiftCardPresetAmount_API_checkResponseTime()'><b>getGiftCardPresetAmount_API_checkResponseTime</b><br>Test class: testCase.TC009_Get_GiftCard_Preset_Amount</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC009_Get_GiftCard_Preset_Amount@18d87d80</td></tr>
+<tr>
+<td title='testCase.TC009_Get_GiftCard_Preset_Amount.getGiftCardPresetAmount_API_checkServerType()'><b>getGiftCardPresetAmount_API_checkServerType</b><br>Test class: testCase.TC009_Get_GiftCard_Preset_Amount</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC009_Get_GiftCard_Preset_Amount@18d87d80</td></tr>
+<tr>
+<td title='testCase.TC009_Get_GiftCard_Preset_Amount.getGiftCardPresetAmount_API_checkStatusCode()'><b>getGiftCardPresetAmount_API_checkStatusCode</b><br>Test class: testCase.TC009_Get_GiftCard_Preset_Amount</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC009_Get_GiftCard_Preset_Amount@18d87d80</td></tr>
+<tr>
+<td title='testCase.TC009_Get_GiftCard_Preset_Amount.getGiftCardPresetAmount_API_checkStatusLine()'><b>getGiftCardPresetAmount_API_checkStatusLine</b><br>Test class: testCase.TC009_Get_GiftCard_Preset_Amount</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC009_Get_GiftCard_Preset_Amount@18d87d80</td></tr>
+<tr>
+<td title='testCase.TC009_Get_GiftCard_Preset_Amount.getGiftCardPresetAmount_API_printAllHeader()'><b>getGiftCardPresetAmount_API_printAllHeader</b><br>Test class: testCase.TC009_Get_GiftCard_Preset_Amount</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC009_Get_GiftCard_Preset_Amount@18d87d80</td></tr>
+<tr>
+<td title='testCase.TC007_Get_Gift_CertificateTemplate.getGiftCertificateTemplate_API_checkContentType()'><b>getGiftCertificateTemplate_API_checkContentType</b><br>Test class: testCase.TC007_Get_Gift_CertificateTemplate</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC007_Get_Gift_CertificateTemplate@1e04fa0a</td></tr>
+<tr>
+<td title='testCase.TC007_Get_Gift_CertificateTemplate.getGiftCertificateTemplate_API_checkResponseBody()'><b>getGiftCertificateTemplate_API_checkResponseBody</b><br>Test class: testCase.TC007_Get_Gift_CertificateTemplate</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC007_Get_Gift_CertificateTemplate@1e04fa0a</td></tr>
+<tr>
+<td title='testCase.TC007_Get_Gift_CertificateTemplate.getGiftCertificateTemplate_API_checkResponseTime()'><b>getGiftCertificateTemplate_API_checkResponseTime</b><br>Test class: testCase.TC007_Get_Gift_CertificateTemplate</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC007_Get_Gift_CertificateTemplate@1e04fa0a</td></tr>
+<tr>
+<td title='testCase.TC007_Get_Gift_CertificateTemplate.getGiftCertificateTemplate_API_checkServerType()'><b>getGiftCertificateTemplate_API_checkServerType</b><br>Test class: testCase.TC007_Get_Gift_CertificateTemplate</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC007_Get_Gift_CertificateTemplate@1e04fa0a</td></tr>
+<tr>
+<td title='testCase.TC007_Get_Gift_CertificateTemplate.getGiftCertificateTemplate_API_checkStatusCode()'><b>getGiftCertificateTemplate_API_checkStatusCode</b><br>Test class: testCase.TC007_Get_Gift_CertificateTemplate</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC007_Get_Gift_CertificateTemplate@1e04fa0a</td></tr>
+<tr>
+<td title='testCase.TC007_Get_Gift_CertificateTemplate.getGiftCertificateTemplate_API_checkStatusLine()'><b>getGiftCertificateTemplate_API_checkStatusLine</b><br>Test class: testCase.TC007_Get_Gift_CertificateTemplate</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC007_Get_Gift_CertificateTemplate@1e04fa0a</td></tr>
+<tr>
+<td title='testCase.TC007_Get_Gift_CertificateTemplate.getGiftCertificateTemplate_API_printAllHeader()'><b>getGiftCertificateTemplate_API_printAllHeader</b><br>Test class: testCase.TC007_Get_Gift_CertificateTemplate</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC007_Get_Gift_CertificateTemplate@1e04fa0a</td></tr>
+<tr>
+<td title='testCase.TC013_Get_Product_Discount.getProductDiscount_API_checkContentType()'><b>getProductDiscount_API_checkContentType</b><br>Test class: testCase.TC013_Get_Product_Discount</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC013_Get_Product_Discount@f5acb9d</td></tr>
+<tr>
+<td title='testCase.TC013_Get_Product_Discount.getProductDiscount_API_checkResponseBody()'><b>getProductDiscount_API_checkResponseBody</b><br>Test class: testCase.TC013_Get_Product_Discount</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC013_Get_Product_Discount@f5acb9d</td></tr>
+<tr>
+<td title='testCase.TC013_Get_Product_Discount.getProductDiscount_API_checkResponseTime()'><b>getProductDiscount_API_checkResponseTime</b><br>Test class: testCase.TC013_Get_Product_Discount</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC013_Get_Product_Discount@f5acb9d</td></tr>
+<tr>
+<td title='testCase.TC013_Get_Product_Discount.getProductDiscount_API_checkServerType()'><b>getProductDiscount_API_checkServerType</b><br>Test class: testCase.TC013_Get_Product_Discount</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC013_Get_Product_Discount@f5acb9d</td></tr>
+<tr>
+<td title='testCase.TC013_Get_Product_Discount.getProductDiscount_API_checkStatusCode()'><b>getProductDiscount_API_checkStatusCode</b><br>Test class: testCase.TC013_Get_Product_Discount</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC013_Get_Product_Discount@f5acb9d</td></tr>
+<tr>
+<td title='testCase.TC013_Get_Product_Discount.getProductDiscount_API_checkStatusLine()'><b>getProductDiscount_API_checkStatusLine</b><br>Test class: testCase.TC013_Get_Product_Discount</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC013_Get_Product_Discount@f5acb9d</td></tr>
+<tr>
+<td title='testCase.TC013_Get_Product_Discount.getProductDiscount_API_printAllHeader()'><b>getProductDiscount_API_printAllHeader</b><br>Test class: testCase.TC013_Get_Product_Discount</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC013_Get_Product_Discount@f5acb9d</td></tr>
+<tr>
+<td title='testCase.TC011_Get_Service_Category.getServiceCategory_API_checkContentType()'><b>getServiceCategory_API_checkContentType</b><br>Test class: testCase.TC011_Get_Service_Category</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC011_Get_Service_Category@58695725</td></tr>
+<tr>
+<td title='testCase.TC011_Get_Service_Category.getServiceCategory_API_checkResponseBody()'><b>getServiceCategory_API_checkResponseBody</b><br>Test class: testCase.TC011_Get_Service_Category</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC011_Get_Service_Category@58695725</td></tr>
+<tr>
+<td title='testCase.TC011_Get_Service_Category.getServiceCategory_API_checkResponseTime()'><b>getServiceCategory_API_checkResponseTime</b><br>Test class: testCase.TC011_Get_Service_Category</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC011_Get_Service_Category@58695725</td></tr>
+<tr>
+<td title='testCase.TC011_Get_Service_Category.getServiceCategory_API_checkServerType()'><b>getServiceCategory_API_checkServerType</b><br>Test class: testCase.TC011_Get_Service_Category</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC011_Get_Service_Category@58695725</td></tr>
+<tr>
+<td title='testCase.TC011_Get_Service_Category.getServiceCategory_API_checkStatusCode()'><b>getServiceCategory_API_checkStatusCode</b><br>Test class: testCase.TC011_Get_Service_Category</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC011_Get_Service_Category@58695725</td></tr>
+<tr>
+<td title='testCase.TC011_Get_Service_Category.getServiceCategory_API_checkStatusLine()'><b>getServiceCategory_API_checkStatusLine</b><br>Test class: testCase.TC011_Get_Service_Category</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC011_Get_Service_Category@58695725</td></tr>
+<tr>
+<td title='testCase.TC011_Get_Service_Category.getServiceCategory_API_printAllHeader()'><b>getServiceCategory_API_printAllHeader</b><br>Test class: testCase.TC011_Get_Service_Category</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC011_Get_Service_Category@58695725</td></tr>
+<tr>
+<td title='testCase.TC005_Get_Service_List.getServiceList_API_checkContentType()'><b>getServiceList_API_checkContentType</b><br>Test class: testCase.TC005_Get_Service_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC005_Get_Service_List@4738a206</td></tr>
+<tr>
+<td title='testCase.TC005_Get_Service_List.getServiceList_API_checkResponseBody()'><b>getServiceList_API_checkResponseBody</b><br>Test class: testCase.TC005_Get_Service_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC005_Get_Service_List@4738a206</td></tr>
+<tr>
+<td title='testCase.TC005_Get_Service_List.getServiceList_API_checkResponseTime()'><b>getServiceList_API_checkResponseTime</b><br>Test class: testCase.TC005_Get_Service_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC005_Get_Service_List@4738a206</td></tr>
+<tr>
+<td title='testCase.TC005_Get_Service_List.getServiceList_API_checkServerType()'><b>getServiceList_API_checkServerType</b><br>Test class: testCase.TC005_Get_Service_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC005_Get_Service_List@4738a206</td></tr>
+<tr>
+<td title='testCase.TC005_Get_Service_List.getServiceList_API_checkStatusCode()'><b>getServiceList_API_checkStatusCode</b><br>Test class: testCase.TC005_Get_Service_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC005_Get_Service_List@4738a206</td></tr>
+<tr>
+<td title='testCase.TC005_Get_Service_List.getServiceList_API_checkStatusLine()'><b>getServiceList_API_checkStatusLine</b><br>Test class: testCase.TC005_Get_Service_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC005_Get_Service_List@4738a206</td></tr>
+<tr>
+<td title='testCase.TC005_Get_Service_List.getServiceList_API_printAllHeader()'><b>getServiceList_API_printAllHeader</b><br>Test class: testCase.TC005_Get_Service_List</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC005_Get_Service_List@4738a206</td></tr>
+<tr>
+<td title='testCase.TC001_LoginValidation.loginAPI_ResponseBody()'><b>loginAPI_ResponseBody</b><br>Test class: testCase.TC001_LoginValidation</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC001_LoginValidation@5acf93bb</td></tr>
+<tr>
+<td title='testCase.TC001_LoginValidation.loginAPI_StatusCode()'><b>loginAPI_StatusCode</b><br>Test class: testCase.TC001_LoginValidation</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC001_LoginValidation@5acf93bb</td></tr>
+<tr>
+<td title='testCase.TC001_LoginValidation.loginAPI_checkContentType()'><b>loginAPI_checkContentType</b><br>Test class: testCase.TC001_LoginValidation</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC001_LoginValidation@5acf93bb</td></tr>
+<tr>
+<td title='testCase.TC001_LoginValidation.loginAPI_checkResponseTime()'><b>loginAPI_checkResponseTime</b><br>Test class: testCase.TC001_LoginValidation</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC001_LoginValidation@5acf93bb</td></tr>
+<tr>
+<td title='testCase.TC001_LoginValidation.loginAPI_checkServerType()'><b>loginAPI_checkServerType</b><br>Test class: testCase.TC001_LoginValidation</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC001_LoginValidation@5acf93bb</td></tr>
+<tr>
+<td title='testCase.TC001_LoginValidation.loginAPI_checkStatusLine()'><b>loginAPI_checkStatusLine</b><br>Test class: testCase.TC001_LoginValidation</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC001_LoginValidation@5acf93bb</td></tr>
+<tr>
+<td title='testCase.TC001_LoginValidation.loginAPI_printAllHeader()'><b>loginAPI_printAllHeader</b><br>Test class: testCase.TC001_LoginValidation</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC001_LoginValidation@5acf93bb</td></tr>
+<tr>
+<td title='testCase.TC015_Remove_Data_From_Cart.removeDataFromCart_API_checkContentType()'><b>removeDataFromCart_API_checkContentType</b><br>Test class: testCase.TC015_Remove_Data_From_Cart</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC015_Remove_Data_From_Cart@5d7148e2</td></tr>
+<tr>
+<td title='testCase.TC015_Remove_Data_From_Cart.removeDataFromCart_API_checkResponseBody()'><b>removeDataFromCart_API_checkResponseBody</b><br>Test class: testCase.TC015_Remove_Data_From_Cart</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC015_Remove_Data_From_Cart@5d7148e2</td></tr>
+<tr>
+<td title='testCase.TC015_Remove_Data_From_Cart.removeDataFromCart_API_checkResponseTime()'><b>removeDataFromCart_API_checkResponseTime</b><br>Test class: testCase.TC015_Remove_Data_From_Cart</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC015_Remove_Data_From_Cart@5d7148e2</td></tr>
+<tr>
+<td title='testCase.TC015_Remove_Data_From_Cart.removeDataFromCart_API_checkServerType()'><b>removeDataFromCart_API_checkServerType</b><br>Test class: testCase.TC015_Remove_Data_From_Cart</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC015_Remove_Data_From_Cart@5d7148e2</td></tr>
+<tr>
+<td title='testCase.TC015_Remove_Data_From_Cart.removeDataFromCart_API_checkStatusCode()'><b>removeDataFromCart_API_checkStatusCode</b><br>Test class: testCase.TC015_Remove_Data_From_Cart</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC015_Remove_Data_From_Cart@5d7148e2</td></tr>
+<tr>
+<td title='testCase.TC015_Remove_Data_From_Cart.removeDataFromCart_API_checkStatusLine()'><b>removeDataFromCart_API_checkStatusLine</b><br>Test class: testCase.TC015_Remove_Data_From_Cart</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC015_Remove_Data_From_Cart@5d7148e2</td></tr>
+<tr>
+<td title='testCase.TC015_Remove_Data_From_Cart.removeDataFromCart_API_printAllHeader()'><b>removeDataFromCart_API_printAllHeader</b><br>Test class: testCase.TC015_Remove_Data_From_Cart</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC015_Remove_Data_From_Cart@5d7148e2</td></tr>
+<tr>
+<td title='testCase.TC014_Remove_Row.removeRow_API_checkContentType()'><b>removeRow_API_checkContentType</b><br>Test class: testCase.TC014_Remove_Row</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC014_Remove_Row@4fb3ee4e</td></tr>
+<tr>
+<td title='testCase.TC014_Remove_Row.removeRow_API_checkResponseBody()'><b>removeRow_API_checkResponseBody</b><br>Test class: testCase.TC014_Remove_Row</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC014_Remove_Row@4fb3ee4e</td></tr>
+<tr>
+<td title='testCase.TC014_Remove_Row.removeRow_API_checkResponseTime()'><b>removeRow_API_checkResponseTime</b><br>Test class: testCase.TC014_Remove_Row</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC014_Remove_Row@4fb3ee4e</td></tr>
+<tr>
+<td title='testCase.TC014_Remove_Row.removeRow_API_checkServerType()'><b>removeRow_API_checkServerType</b><br>Test class: testCase.TC014_Remove_Row</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC014_Remove_Row@4fb3ee4e</td></tr>
+<tr>
+<td title='testCase.TC014_Remove_Row.removeRow_API_checkStatusCode()'><b>removeRow_API_checkStatusCode</b><br>Test class: testCase.TC014_Remove_Row</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC014_Remove_Row@4fb3ee4e</td></tr>
+<tr>
+<td title='testCase.TC014_Remove_Row.removeRow_API_checkStatusLine()'><b>removeRow_API_checkStatusLine</b><br>Test class: testCase.TC014_Remove_Row</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC014_Remove_Row@4fb3ee4e</td></tr>
+<tr>
+<td title='testCase.TC014_Remove_Row.removeRow_API_printAllHeader()'><b>removeRow_API_printAllHeader</b><br>Test class: testCase.TC014_Remove_Row</td>
+<td></td>
+<td>0</td>
+<td>testCase.TC014_Remove_Row@4fb3ee4e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCase.TC016_Update_Cart_Quantity.updateCartQuantity_API_checkContentType()'><b>updateCartQuantity_API_checkContentType</b><br>Test class: testCase.TC016_Update_Cart_Quantity</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;405&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at testCase.TC016_Update_Cart_Quantity.updateCartQuantity(TC016_Update_Cart_Quantity.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 39 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1540140763", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1540140763'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;405&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at jdk.internal.reflect.GeneratedMethodAccessor181.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at testCase.TC016_Update_Cart_Quantity.updateCartQuantity(TC016_Update_Cart_Quantity.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCase.TC016_Update_Cart_Quantity@25fb8912</td></tr>
+<tr>
+<td title='testCase.TC016_Update_Cart_Quantity.updateCartQuantity_API_checkResponseBody()'><b>updateCartQuantity_API_checkResponseBody</b><br>Test class: testCase.TC016_Update_Cart_Quantity</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;405&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at testCase.TC016_Update_Cart_Quantity.updateCartQuantity(TC016_Update_Cart_Quantity.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 39 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace401366570", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace401366570'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;405&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at jdk.internal.reflect.GeneratedMethodAccessor181.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at testCase.TC016_Update_Cart_Quantity.updateCartQuantity(TC016_Update_Cart_Quantity.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCase.TC016_Update_Cart_Quantity@25fb8912</td></tr>
+<tr>
+<td title='testCase.TC016_Update_Cart_Quantity.updateCartQuantity_API_checkResponseTime()'><b>updateCartQuantity_API_checkResponseTime</b><br>Test class: testCase.TC016_Update_Cart_Quantity</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;405&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at testCase.TC016_Update_Cart_Quantity.updateCartQuantity(TC016_Update_Cart_Quantity.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 39 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1378422371", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1378422371'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;405&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at jdk.internal.reflect.GeneratedMethodAccessor181.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at testCase.TC016_Update_Cart_Quantity.updateCartQuantity(TC016_Update_Cart_Quantity.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCase.TC016_Update_Cart_Quantity@25fb8912</td></tr>
+<tr>
+<td title='testCase.TC016_Update_Cart_Quantity.updateCartQuantity_API_checkServerType()'><b>updateCartQuantity_API_checkServerType</b><br>Test class: testCase.TC016_Update_Cart_Quantity</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;405&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at testCase.TC016_Update_Cart_Quantity.updateCartQuantity(TC016_Update_Cart_Quantity.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 39 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1814943883", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1814943883'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;405&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at jdk.internal.reflect.GeneratedMethodAccessor181.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at testCase.TC016_Update_Cart_Quantity.updateCartQuantity(TC016_Update_Cart_Quantity.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCase.TC016_Update_Cart_Quantity@25fb8912</td></tr>
+<tr>
+<td title='testCase.TC016_Update_Cart_Quantity.updateCartQuantity_API_checkStatusCode()'><b>updateCartQuantity_API_checkStatusCode</b><br>Test class: testCase.TC016_Update_Cart_Quantity</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;405&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at testCase.TC016_Update_Cart_Quantity.updateCartQuantity(TC016_Update_Cart_Quantity.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 39 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1238989252", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1238989252'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;405&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at jdk.internal.reflect.GeneratedMethodAccessor181.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at testCase.TC016_Update_Cart_Quantity.updateCartQuantity(TC016_Update_Cart_Quantity.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCase.TC016_Update_Cart_Quantity@25fb8912</td></tr>
+<tr>
+<td title='testCase.TC016_Update_Cart_Quantity.updateCartQuantity_API_checkStatusLine()'><b>updateCartQuantity_API_checkStatusLine</b><br>Test class: testCase.TC016_Update_Cart_Quantity</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;405&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at testCase.TC016_Update_Cart_Quantity.updateCartQuantity(TC016_Update_Cart_Quantity.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 39 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1018262491", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1018262491'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;405&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at jdk.internal.reflect.GeneratedMethodAccessor181.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at testCase.TC016_Update_Cart_Quantity.updateCartQuantity(TC016_Update_Cart_Quantity.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCase.TC016_Update_Cart_Quantity@25fb8912</td></tr>
+<tr>
+<td title='testCase.TC016_Update_Cart_Quantity.updateCartQuantity_API_printAllHeader()'><b>updateCartQuantity_API_printAllHeader</b><br>Test class: testCase.TC016_Update_Cart_Quantity</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;405&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at testCase.TC016_Update_Cart_Quantity.updateCartQuantity(TC016_Update_Cart_Quantity.java:42)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 39 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace644950072", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace644950072'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;405&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at jdk.internal.reflect.GeneratedMethodAccessor181.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor180.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at testCase.TC016_Update_Cart_Quantity.updateCartQuantity(TC016_Update_Cart_Quantity.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>testCase.TC016_Update_Cart_Quantity@25fb8912</td></tr>
+</table><p>
+</body>
+</html>
