@@ -3,18 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCase.TC016_Update_Cart_Quantity">
+      <class name="testCase.TC001_LoginValidation">
         <methods>
-          <include name="updateCartQuantity_API_checkStatusCode"/>
-          <include name="updateCartQuantity_API_printAllHeader"/>
-          <include name="updateCartQuantity_API_checkResponseBody"/>
-          <include name="updateCartQuantity_API_checkStatusLine"/>
-          <include name="updateCartQuantity_API_checkServerType"/>
-          <include name="updateCartQuantity"/>
-          <include name="updateCartQuantity_API_checkContentType"/>
-          <include name="updateCartQuantity_API_checkResponseTime"/>
+          <include name="loginAPI_checkContentType"/>
+          <include name="loginAPI"/>
+          <include name="loginAPI_checkServerType"/>
+          <include name="loginAPI_StatusCode"/>
+          <include name="loginAPI_printAllHeader"/>
+          <include name="loginAPI_ResponseBody"/>
+          <include name="loginAPI_checkStatusLine"/>
+          <include name="loginAPI_checkResponseTime"/>
         </methods>
-      </class> <!-- testCase.TC016_Update_Cart_Quantity -->
+      </class> <!-- testCase.TC001_LoginValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

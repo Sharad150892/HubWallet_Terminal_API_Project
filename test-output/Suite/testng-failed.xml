@@ -6,12 +6,150 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="testCase.TC018_Generate_Token">
+        <methods>
+          <include name="generateToken_API_printAllHeader"/>
+          <include name="generateToken_API_checkResponseBody"/>
+          <include name="generateToken_API_checkStatusCode"/>
+          <include name="generateToken"/>
+          <include name="generateToken_API_checkServerType"/>
+          <include name="generateToken_API_checkStatusLine"/>
+          <include name="generateToken_API_checkContentType"/>
+          <include name="generateToken_API_checkResponseTime"/>
+        </methods>
+      </class> <!-- testCase.TC018_Generate_Token -->
+      <class name="testCase.TC010_Add_Gift_Card">
+        <methods>
+          <include name="addGiftCard_API_checkContentType"/>
+          <include name="addGiftCard_API_checkStatusLine"/>
+          <include name="addGiftCard_API_checkServerType"/>
+          <include name="addGiftCard_API_checkResponseBody"/>
+          <include name="addGiftCard_API_checkResponseTime"/>
+          <include name="addGiftCard"/>
+          <include name="addGiftCard_API_checkStatusCode"/>
+          <include name="addGiftCard_API_printAllHeader"/>
+        </methods>
+      </class> <!-- testCase.TC010_Add_Gift_Card -->
+      <class name="testCase.TC009_Get_GiftCard_Preset_Amount">
+        <methods>
+          <include name="getGiftCardPresetAmount_API_checkResponseBody"/>
+          <include name="getGiftCardPresetAmount"/>
+          <include name="getGiftCardPresetAmount_API_printAllHeader"/>
+          <include name="getGiftCardPresetAmount_API_checkServerType"/>
+          <include name="getGiftCardPresetAmount_API_checkStatusCode"/>
+          <include name="getGiftCardPresetAmount_API_checkContentType"/>
+          <include name="getGiftCardPresetAmount_API_checkStatusLine"/>
+          <include name="getGiftCardPresetAmount_API_checkResponseTime"/>
+        </methods>
+      </class> <!-- testCase.TC009_Get_GiftCard_Preset_Amount -->
+      <class name="testCase.TC017_Check_Number">
+        <methods>
+          <include name="checkNumber_API_checkServerType"/>
+          <include name="checkNumber_API_checkStatusLine"/>
+          <include name="checkNumber_API_checkResponseTime"/>
+          <include name="checkNumber_API_printAllHeader"/>
+          <include name="checkNumber_API_checkContentType"/>
+          <include name="checkNumber_API_checkStatusCode"/>
+          <include name="checkNumber"/>
+          <include name="checkNumber_API_checkResponseBody"/>
+        </methods>
+      </class> <!-- testCase.TC017_Check_Number -->
+      <class name="testCase.TC015_Remove_Data_From_Cart">
+        <methods>
+          <include name="removeDataFromCart_API_checkResponseBody"/>
+          <include name="removeDataFromCart_API_checkServerType"/>
+          <include name="removeDataFromCart_API_checkResponseTime"/>
+          <include name="removeDataFromCart"/>
+          <include name="removeDataFromCart_API_checkStatusCode"/>
+          <include name="removeDataFromCart_API_checkContentType"/>
+          <include name="removeDataFromCart_API_checkStatusLine"/>
+          <include name="removeDataFromCart_API_printAllHeader"/>
+        </methods>
+      </class> <!-- testCase.TC015_Remove_Data_From_Cart -->
+      <class name="testCase.TC001_LoginValidation">
+        <methods>
+          <include name="loginAPI_checkContentType"/>
+          <include name="loginAPI"/>
+          <include name="loginAPI_checkServerType"/>
+          <include name="loginAPI_StatusCode"/>
+          <include name="loginAPI_printAllHeader"/>
+          <include name="loginAPI_ResponseBody"/>
+          <include name="loginAPI_checkStatusLine"/>
+          <include name="loginAPI_checkResponseTime"/>
+        </methods>
+      </class> <!-- testCase.TC001_LoginValidation -->
+      <class name="testCase.TC006_Add_Services">
+        <methods>
+          <include name="addServicesInCheckout"/>
+          <include name="addService_API_checkServerType"/>
+          <include name="addService_API_checkContentType"/>
+          <include name="addService_API_checkStatusCode"/>
+          <include name="addService_API_printAllHeader"/>
+          <include name="addService_API_checkResponseTime"/>
+          <include name="addService_API_checkResponseBody"/>
+          <include name="addService_API_checkStatusLine"/>
+        </methods>
+      </class> <!-- testCase.TC006_Add_Services -->
+      <class name="testCase.TC007_Get_Gift_CertificateTemplate">
+        <methods>
+          <include name="getGiftCertificateTemplate"/>
+          <include name="getGiftCertificateTemplate_API_checkResponseBody"/>
+          <include name="getGiftCertificateTemplate_API_checkServerType"/>
+          <include name="getGiftCertificateTemplate_API_checkResponseTime"/>
+          <include name="getGiftCertificateTemplate_API_printAllHeader"/>
+          <include name="getGiftCertificateTemplate_API_checkStatusLine"/>
+          <include name="getGiftCertificateTemplate_API_checkContentType"/>
+          <include name="getGiftCertificateTemplate_API_checkStatusCode"/>
+        </methods>
+      </class> <!-- testCase.TC007_Get_Gift_CertificateTemplate -->
+      <class name="testCase.TC011_Get_Service_Category">
+        <methods>
+          <include name="getServiceCategory_API_checkContentType"/>
+          <include name="getServiceCategory_API_checkServerType"/>
+          <include name="getServiceCategory_API_checkResponseBody"/>
+          <include name="getServiceCategory_API_checkStatusLine"/>
+          <include name="getServiceCategory"/>
+          <include name="getServiceCategory_API_checkResponseTime"/>
+          <include name="getServiceCategory_API_checkStatusCode"/>
+          <include name="getServiceCategory_API_printAllHeader"/>
+        </methods>
+      </class> <!-- testCase.TC011_Get_Service_Category -->
       <class name="testCase.TC012_Add_Customer">
         <methods>
           <include name="addCustomer"/>
+          <include name="addCustomer_API_checkStatusLine"/>
+          <include name="addCustomer_API_checkServerType"/>
+          <include name="addCustomer_API_checkContentType"/>
+          <include name="addCustomer_API_checkResponseBody"/>
+          <include name="addCustomer_API_printAllHeader"/>
+          <include name="addCustomer_API_checkStatusCode"/>
           <include name="addCustomer_API_checkResponseTime"/>
         </methods>
       </class> <!-- testCase.TC012_Add_Customer -->
+      <class name="testCase.TC013_Get_Product_Discount">
+        <methods>
+          <include name="getProductDiscount"/>
+          <include name="getProductDiscount_API_checkResponseBody"/>
+          <include name="getProductDiscount_API_checkResponseTime"/>
+          <include name="getProductDiscount_API_checkStatusCode"/>
+          <include name="getProductDiscount_API_checkContentType"/>
+          <include name="getProductDiscount_API_checkServerType"/>
+          <include name="getProductDiscount_API_checkStatusLine"/>
+          <include name="getProductDiscount_API_printAllHeader"/>
+        </methods>
+      </class> <!-- testCase.TC013_Get_Product_Discount -->
+      <class name="testCase.TC003_Get_Appointment_List">
+        <methods>
+          <include name="getAppointmentListAPI_checkStatusLine"/>
+          <include name="getAppointmentList_API_checkServerType"/>
+          <include name="getAppointmentList"/>
+          <include name="getAppointmentList_API_checkContentType"/>
+          <include name="getAppointmentList_API_checkStatusCode"/>
+          <include name="getAppointmentList_API_checkResponseBody"/>
+          <include name="getAppointmentList_API_checkResponseTime"/>
+          <include name="getAppointmentList_API_printAllHeader"/>
+        </methods>
+      </class> <!-- testCase.TC003_Get_Appointment_List -->
       <class name="testCase.TC016_Update_Cart_Quantity">
         <methods>
           <include name="updateCartQuantity_API_checkStatusCode"/>
@@ -24,6 +162,66 @@
           <include name="updateCartQuantity_API_checkResponseTime"/>
         </methods>
       </class> <!-- testCase.TC016_Update_Cart_Quantity -->
+      <class name="testCase.TC005_Get_Service_List">
+        <methods>
+          <include name="getServiceList_API_checkStatusLine"/>
+          <include name="getServiceList_API_checkResponseTime"/>
+          <include name="getServiceList_API_checkResponseBody"/>
+          <include name="getServiceList_API_checkStatusCode"/>
+          <include name="getServiceList_API_checkContentType"/>
+          <include name="getServiceList_API_checkServerType"/>
+          <include name="getServiceList"/>
+          <include name="getServiceList_API_printAllHeader"/>
+        </methods>
+      </class> <!-- testCase.TC005_Get_Service_List -->
+      <class name="testCase.TC004_Get_Checkout_Data">
+        <methods>
+          <include name="getCheckoutData_API_checkResponseTime"/>
+          <include name="getCheckoutData_API_checkContentType"/>
+          <include name="getCheckOutData"/>
+          <include name="getCheckoutData_API_checkStatusCode"/>
+          <include name="getCheckoutData_API_checkStatusLine"/>
+          <include name="getCheckoutData_API_checkResponseBody"/>
+          <include name="getCheckoutData_API_checkServerType"/>
+          <include name="getCheckoutData_API_printAllHeader"/>
+        </methods>
+      </class> <!-- testCase.TC004_Get_Checkout_Data -->
+      <class name="testCase.TC002_Get_Customer_List">
+        <methods>
+          <include name="getCustomerList_API_checkContentType"/>
+          <include name="getCustomerList_API_checkResponseTime"/>
+          <include name="getCustomerList_API_checkServerType"/>
+          <include name="getCustomerList_API_printAllHeader"/>
+          <include name="getCustomerList_API_checkStatusLine"/>
+          <include name="getCustomerList"/>
+          <include name="getCustomerList_API_checkStatusCode"/>
+          <include name="getCustomerList_API_checkResponseBody"/>
+        </methods>
+      </class> <!-- testCase.TC002_Get_Customer_List -->
+      <class name="testCase.TC008_Add_Certificate">
+        <methods>
+          <include name="addCertificate_API_checkResponseTime"/>
+          <include name="addCertificate_API_checkResponseBody"/>
+          <include name="addCertificate_API_printAllHeader"/>
+          <include name="addCertificate_checkStatusLine"/>
+          <include name="addCertificate_API_checkContentType"/>
+          <include name="addCertificate_API_checkStatusCode"/>
+          <include name="addCertificate"/>
+          <include name="addCertificate_API_checkServerType"/>
+        </methods>
+      </class> <!-- testCase.TC008_Add_Certificate -->
+      <class name="testCase.TC014_Remove_Row">
+        <methods>
+          <include name="removeRow_API_checkStatusLine"/>
+          <include name="removeRow_API_printAllHeader"/>
+          <include name="removeRow_API_checkStatusCode"/>
+          <include name="removeRow_API_checkContentType"/>
+          <include name="removeRow_API_checkResponseBody"/>
+          <include name="removeRow_API_checkServerType"/>
+          <include name="removeRow_API_checkResponseTime"/>
+          <include name="removeRow"/>
+        </methods>
+      </class> <!-- testCase.TC014_Remove_Row -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
